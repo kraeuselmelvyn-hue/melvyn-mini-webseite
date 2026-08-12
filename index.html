@@ -18,7 +18,7 @@
 <body>
   <div class="announcement">HALAL FRIED CHICKEN · BERLIN OSTBAHNHOF · DI–SO GEÖFFNET</div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Chickentopia Startseite"><span>CHICKEN</span><b>TOPIA</b></a>
+    <a class="home-logo" href="#home" aria-label="Zurück zum Anfang"><img src="assets/mascot-sticker-sheet.png" alt="Chickentopia Maskottchen" style="width:200%;max-width:none;left:0;top:0;transform:none"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><em>Menü</em></button>
     <nav id="main-nav" aria-label="Hauptnavigation">
       <a href="#menu">Menü</a><a href="#flavours">Flavours</a><a href="#location">Location</a>
@@ -29,28 +29,19 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-copy">
-        <p class="kicker">Welcome to the family</p>
-        <h1>CRUNCHY.<br><span>SAUCY.</span><br>BERLIN.</h1>
-        <p class="hero-text">Fried Chicken, wie es sein soll: außen brutal crunchy, innen saftig und mit deinem Lieblings-Flavour glasiert.</p>
-        <div class="hero-actions"><a class="btn btn-dark" href="#menu">Menü entdecken</a><a class="btn btn-light" href="#location">Komm vorbei</a></div>
-        <div class="proof"><strong>100% HALAL</strong><span>Wings · Boneless · Tenders</span></div>
+        <p class="kicker">Halal Fried Chicken · Berlin</p>
+        <h1>IMMER SCHÖN<br><span>DIPPEN.</span></h1>
+        <p class="hero-text">Knuspriges Chicken, fünf Signature Flavours und unser cremiger Ranch Dip – American Street Food direkt am Berliner Ostbahnhof.</p>
+        <div class="hero-actions"><a class="btn btn-dark" href="#menu">Menü ansehen</a><a class="simple-link" href="https://wolt.com/de/deu/berlin/restaurant/chickentopia" target="_blank" rel="noreferrer">Jetzt bestellen ↗</a></div>
       </div>
-      <div class="hero-visual">
-        <div class="sunburst" aria-hidden="true"></div>
-        <div class="sticker">BERLIN'S<br><b>CHICKEN</b><br>SPOT</div>
-        <div class="hero-mascot" role="img" aria-label="Chickentopia Maskottchen mit Chicken Drumstick"><img src="assets/mascot-sticker-sheet.png" alt=""></div>
-        <div class="food-polaroid"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg" alt="Chickentopia Fried Chicken mit Pommes, Sandwiches und Dips"><b>CRUNCH CHECK ✓</b></div>
-        <span class="scribble">made fresh ↗</span>
-      </div>
+      <div class="hero-food"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg" alt="Chickentopia Fried Chicken, Sandwiches, Pommes und Dips"><span>100% HALAL</span></div>
     </section>
 
     <section class="ticker" aria-label="Chickentopia Highlights"><div>WINGS ★ BONELESS ★ TENDERS ★ HOT HONEY ★ SEOUL SWEET CHILI ★ BASIL BOMB ★ LEMON PEPPER KICK ★&nbsp;</div></section>
 
-    <section class="icon-bar" aria-label="Chickentopia Vorteile">
-      <article><span class="cartoon-icon">🍗</span><div><b>CRISPY</b><small>Double crunch</small></div></article>
-      <article><span class="cartoon-icon">🔥</span><div><b>SAUCY</b><small>5 Flavours</small></div></article>
-      <article><span class="cartoon-icon">☪</span><div><b>HALAL</b><small>100 Prozent</small></div></article>
-      <article><span class="cartoon-icon">📍</span><div><b>BERLIN</b><small>Ostbahnhof</small></div></article>
+    <section class="dip-story" aria-label="Chicken Wing mit Ranch Dip">
+      <div class="dip-copy"><p>Our perfect match</p><h2>CRUNCH<br>MEETS<br><span>CREAMY.</span></h2><p>Unser Ranch Dip macht jeden Wing komplett. Scroll weiter und hol dir den perfekten Dip.</p></div>
+      <div class="dip-stage"><div class="dip-motion"><img class="dip-wing" src="assets/dipping-wing.png" alt="Knuspriger Chicken Wing"><img class="dip-cup" src="assets/ranch-cup.png" alt="Ranch Dip Becher"></div><span>Scroll to dip ↓</span></div>
     </section>
 
     <section class="menu-section" id="menu">
@@ -75,12 +66,6 @@
       </div>
     </section>
 
-    <section class="mascot-family">
-      <div class="mascot-family-copy"><p>Meet the Chickentopia family</p><h2>GOOD FOOD.<br>GOOD MOOD.</h2><span>Unser Chicken kommt mit Crunch, Charakter und einer ordentlichen Portion Berliner Street-Food-Energie.</span></div>
-      <img src="assets/mascot-sticker-sheet.png" alt="Chickentopia Maskottchen in verschiedenen Food-Posen">
-      <div class="doodle doodle-one" aria-hidden="true">★</div><div class="doodle doodle-two" aria-hidden="true">YUM!</div>
-    </section>
-
     <section class="social-section">
       <div><p>Follow the crunch</p><h2>@CHICKENTOPIADE</h2></div>
       <a href="https://www.instagram.com/chickentopiade/" target="_blank" rel="noreferrer">Auf Instagram folgen ↗</a>
@@ -100,6 +85,9 @@
     const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
     toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');nav.classList.remove('open')}));
+    const dipStory=document.querySelector('.dip-story');
+    const updateDip=()=>{if(!dipStory)return;const r=dipStory.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(innerHeight-r.top)/(innerHeight+r.height*.35)));dipStory.style.setProperty('--dip-progress',progress.toFixed(3))};
+    addEventListener('scroll',updateDip,{passive:true});addEventListener('resize',updateDip);updateDip();
   </script>
 </body>
 </html>
