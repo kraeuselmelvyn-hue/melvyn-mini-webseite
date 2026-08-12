@@ -63,3 +63,22 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
 @media(max-width:720px){
   .map-card,.map-card iframe{min-height:450px}
 }
+
+
+/* Official social video embeds replace the static food collage. */
+.social-videos{align-items:start}
+.social-video{position:relative;overflow:hidden;border-radius:16px;background:#0f0b09;border:1px solid rgba(255,255,255,.14)}
+.social-video iframe{display:block;width:100%;height:620px;border:0;background:#0f0b09}
+.social-video-featured iframe{height:720px}
+.social-video>a{display:block;padding:13px 15px;color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-top:1px solid rgba(255,255,255,.14)}
+.social-video>a:hover{color:var(--orange)}
+@media(max-width:1050px){
+  .social-videos{grid-template-columns:repeat(3,minmax(280px,1fr));overflow-x:auto;padding-bottom:12px}
+  .social-video{min-width:280px}
+  .social-video iframe,.social-video-featured iframe{height:590px}
+}
+@media(max-width:720px){
+  .social-videos{display:flex}
+  .social-video{min-width:84vw}
+  .social-video iframe,.social-video-featured iframe{height:560px}
+}
