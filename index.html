@@ -1,48 +1,90 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Persönliche Mini-Website von Melvyn Kraeusel – E-Commerce, SEO und Digital Entrepreneurship." />
-    <title>Melvyn Kraeusel · Digital Entrepreneurship</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="nav">
-      <a class="logo" href="#start" aria-label="Zur Startseite">MK<span>.</span></a>
-      <a class="nav-link" href="#kontakt">Kontakt</a>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffcc00">
+  <meta name="description" content="Chickentopia Berlin: Halal Fried Chicken, Wings, Boneless Chicken und Tenders mit einzigartigen Flavours. Am Hermann-Stöhr-Platz nahe Ostbahnhof oder via Wolt und Uber Eats bestellen.">
+  <meta property="og:title" content="Chickentopia Berlin | Halal Fried Chicken">
+  <meta property="og:description" content="Crunchy, saucy, unforgettable. Entdecke Wings, Boneless, Tenders und unsere Signature Flavours in Berlin.">
+  <meta property="og:image" content="https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg">
+  <title>Chickentopia Berlin | Halal Fried Chicken am Ostbahnhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FastFoodRestaurant","name":"Chickentopia","servesCuisine":["Fried Chicken","Halal","American"],"address":{"@type":"PostalAddress","streetAddress":"Hermann-Stöhr-Platz","postalCode":"10243","addressLocality":"Berlin","addressCountry":"DE"},"sameAs":["https://www.instagram.com/chickentopiade/"],"url":"https://www.instagram.com/chickentopiade/","image":"https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"12:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"14:30","closes":"22:00"}]}</script>
+</head>
+<body>
+  <div class="announcement">HALAL FRIED CHICKEN · BERLIN OSTBAHNHOF · DI–SO GEÖFFNET</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Chickentopia Startseite"><span>CHICKEN</span><b>TOPIA</b></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><em>Menü</em></button>
+    <nav id="main-nav" aria-label="Hauptnavigation">
+      <a href="#menu">Menü</a><a href="#flavours">Flavours</a><a href="#location">Location</a>
+      <a class="nav-order" href="https://wolt.com/de/deu/berlin/restaurant/chickentopia" target="_blank" rel="noreferrer">Jetzt bestellen ↗</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero" id="start">
-        <div class="orb orb-one" aria-hidden="true"></div>
-        <div class="orb orb-two" aria-hidden="true"></div>
-        <p class="eyebrow"><span></span>Berlin · Digital Entrepreneurship</p>
-        <h1>Hallo! Ideen werden<br /><em>digital.</em></h1>
-        <p class="intro">Hi, ich bin Melvyn. Ich verbinde E-Commerce, Marketing und unternehmerisches Denken zu digitalen Erlebnissen, die im Kopf bleiben.</p>
-        <div class="actions">
-          <a class="button" href="#schwerpunkte">Meine Schwerpunkte <span>↘</span></a>
-          <a class="text-link" href="#kontakt">Lass uns sprechen</a>
-        </div>
-      </section>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="kicker">Welcome to the family</p>
+        <h1>CRUNCHY.<br><span>SAUCY.</span><br>BERLIN.</h1>
+        <p class="hero-text">Fried Chicken, wie es sein soll: außen brutal crunchy, innen saftig und mit deinem Lieblings-Flavour glasiert.</p>
+        <div class="hero-actions"><a class="btn btn-dark" href="#menu">Menü entdecken</a><a class="btn btn-light" href="#location">Komm vorbei</a></div>
+        <div class="proof"><strong>100% HALAL</strong><span>Wings · Boneless · Tenders</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="sticker">BERLIN'S<br><b>CHICKEN</b><br>SPOT</div>
+        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg" alt="Chickentopia Fried Chicken mit Pommes, Sandwiches und Dips">
+        <span class="scribble">made fresh ↗</span>
+      </div>
+    </section>
 
-      <section class="work" id="schwerpunkte">
-        <div class="section-head">
-          <p>Was mich antreibt</p>
-          <h2>Digital denken.<br />Einfach umsetzen.</h2>
-        </div>
-        <div class="cards">
-          <article class="card"><span>01</span><div><h3>E-Commerce</h3><p>Digitale Shops, klare Nutzerführung und messbare Sichtbarkeit.</p></div></article>
-          <article class="card"><span>02</span><div><h3>SEO &amp; Content</h3><p>Inhalte, die Menschen verstehen und Suchmaschinen finden.</p></div></article>
-          <article class="card"><span>03</span><div><h3>Neue Ideen</h3><p>Von der ersten Skizze bis zu einem überzeugenden digitalen Produkt.</p></div></article>
-        </div>
-      </section>
-    </main>
+    <section class="ticker" aria-label="Chickentopia Highlights"><div>WINGS ★ BONELESS ★ TENDERS ★ HOT HONEY ★ SEOUL SWEET CHILI ★ BASIL BOMB ★ LEMON PEPPER KICK ★&nbsp;</div></section>
 
-    <footer id="kontakt">
-      <p>Bereit für etwas Neues?</p>
-      <a href="https://kraeusel.framer.media/" target="_blank" rel="noreferrer">Mein Portfolio ansehen <span>↗</span></a>
-      <div class="footer-bottom"><span>© 2026 Melvyn Kraeusel</span><span>Made with curiosity.</span></div>
-    </footer>
-  </body>
+    <section class="menu-section" id="menu">
+      <div class="section-title"><p>Pick your favorite</p><h2>UNSER MENÜ</h2><span>Frisch frittiert. Voller Flavour.</span></div>
+      <div class="menu-grid">
+        <article class="food-card feature"><div class="food-img"><img src="https://imageproxy.wolt.com/assets/6995b3eeb353386403c26b4c" alt="Chickentopia Boneless Chicken"></div><div class="food-copy"><p class="tag">Bestseller</p><h3>BONELESS</h3><p>Zarte Chicken Bites ohne Knochen, crunchy frittiert und mit Flavour deiner Wahl.</p><div><span>6er</span><b>9,50 €</b></div><div><span>10er</span><b>14,90 €</b></div><div><span>14er</span><b>18,90 €</b></div></div></article>
+        <article class="food-card"><div class="food-img"><img src="https://imageproxy.wolt.com/assets/6995b46db353386403c26bb9" alt="Chickentopia Chicken Wings"></div><div class="food-copy"><p class="tag hot">Classic</p><h3>WINGS</h3><p>Goldbraune Chicken Wings mit Ranch Dip und deinem Signature Flavour.</p><div><span>6er</span><b>9,50 €</b></div><div><span>10er</span><b>14,90 €</b></div><div><span>14er</span><b>18,90 €</b></div></div></article>
+        <article class="food-card"><div class="food-img"><img src="https://imageproxy.wolt.com/assets/6995b49ab353386403c26bdc" alt="Chickentopia Chicken Tenders"></div><div class="food-copy"><p class="tag">Handpaniert</p><h3>TENDERS</h3><p>Saftige, handpanierte Innenfilets – inklusive Ranch Dip und Flavour.</p><div><span>2er</span><b>6,90 €</b></div><div><span>4er</span><b>11,90 €</b></div></div></article>
+        <article class="food-card sandwich"><div class="food-img"><img src="https://imageproxy.wolt.com/assets/6995b44cb353386403c26b85" alt="Abu Topia Chicken Sandwich"></div><div class="food-copy"><p class="tag hot">Signature</p><h3>ABU TOPIA</h3><p>2 Nashville-Spice-Tenders, Chickentopia-Soße, Coleslaw, Pommes und Ranch.</p><div><span>Sandwich</span><b>12,90 €</b></div></div></article>
+      </div>
+      <div class="menu-note"><strong>Mach's zum Menü!</strong><span>Chicken + Pommes + Ranch Dip + Softdrink</span><a href="https://wolt.com/de/deu/berlin/restaurant/chickentopia" target="_blank" rel="noreferrer">Vollständiges Menü auf Wolt ↗</a></div>
+    </section>
+
+    <section class="flavours" id="flavours">
+      <div class="flavour-intro"><p>Choose your mood</p><h2>FIVE FLAVOURS.<br>ONE OBSESSION.</h2><p>Von fresh & herby bis sweet & spicy: Du entscheidest, wie dein Chicken heute kickt.</p></div>
+      <div class="flavour-list">
+        <article><span>01</span><div><h3>BASIL BOMB</h3><p>Fresh · Herby · Creamy</p></div><b>MILD</b></article>
+        <article><span>02</span><div><h3>LEMON PEPPER KICK</h3><p>Zesty · Peppery · Bright</p></div><b>MILD</b></article>
+        <article><span>03</span><div><h3>SEOUL SWEET CHILI</h3><p>Sweet · Sticky · Spicy</p></div><b>MEDIUM</b></article>
+        <article><span>04</span><div><h3>NASHVILLE SPICE</h3><p>Smoky · Bold · Hot</p></div><b>HOT</b></article>
+        <article><span>05</span><div><h3>HOT HONEY</h3><p>Sweet · Fiery · Addictive</p></div><b>FAVORITE</b></article>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div><p>Follow the crunch</p><h2>@CHICKENTOPIADE</h2></div>
+      <a href="https://www.instagram.com/chickentopiade/" target="_blank" rel="noreferrer">Auf Instagram folgen ↗</a>
+      <div class="social-collage"><img src="https://imageproxy.wolt.com/assets/6995b4f3c7fede311b1aea52" alt="Pommes von Chickentopia"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/dbe100ffac535075592fb37d4d0f6a33/5283d81c664b43c5f57a3a186d273063.jpeg" alt="Chickentopia Food Auswahl"><img src="https://imageproxy.wolt.com/assets/6995b3eeb353386403c26b4c" alt="Glasiertes Boneless Chicken"></div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="location-copy"><p class="kicker">Dein Chicken-Spot in Berlin</p><h2>FIND YOUR<br>WAY TO <span>TOPIA.</span></h2><div class="address"><h3>Hermann-Stöhr-Platz<br>10243 Berlin</h3><p>Direkt am Ostbahnhof</p></div><div class="hours"><div><span>Montag</span><b>Geschlossen</b></div><div><span>Dienstag – Freitag</span><b>12:00 – 22:00</b></div><div><span>Samstag – Sonntag</span><b>14:30 – 22:00</b></div></div><a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Chickentopia+Hermann-St%C3%B6hr-Platz+10243+Berlin" target="_blank" rel="noreferrer">Route öffnen ↗</a></div>
+      <div class="map-card"><div class="map-grid"></div><div class="pin"><span>★</span></div><p>OSTBAHNHOF</p></div>
+    </section>
+
+    <section class="order-section"><p>Hungry already?</p><h2>GET YOUR<br>CHICKEN.</h2><div><a class="order-wolt" href="https://wolt.com/de/deu/berlin/restaurant/chickentopia" target="_blank" rel="noreferrer">Bestellen auf Wolt ↗</a><a class="order-uber" href="https://www.ubereats.com/de/store/chickentopia-i-fried-chicken-i/0vV1zd8cWTOb1sjANuBtMQ" target="_blank" rel="noreferrer">Bestellen auf Uber Eats ↗</a></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span>CHICKEN</span><b>TOPIA</b></a><p>Halal Fried Chicken · Berlin</p><div><a href="#menu">Menü</a><a href="#location">Location</a><a href="https://www.instagram.com/chickentopiade/" target="_blank" rel="noreferrer">Instagram ↗</a></div><small>© 2026 Chickentopia. Alle Preise inkl. MwSt.; Angaben ohne Gewähr.</small></footer>
+  <script>
+    const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
+    toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');nav.classList.remove('open')}));
+  </script>
+</body>
 </html>
