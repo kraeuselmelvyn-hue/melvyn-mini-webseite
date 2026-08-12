@@ -39,3 +39,19 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
 @media(max-width:720px){
   .hero-actions .delivery-pair .brand-button{width:100%}
 }
+
+
+/* Brand story between the hero and menu. */
+.vision-section{scroll-margin-top:100px;padding:110px 5vw;background:#fff6e8;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(150px,.45fr) 1.55fr;gap:7vw}
+.vision-label{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;border-top:2px solid var(--ink);padding-top:16px;min-height:240px;text-transform:uppercase}
+.vision-label span{font-size:11px;font-weight:800;letter-spacing:.16em;color:#c93d22}
+.vision-label b{font:28px "Anton",Impact,sans-serif;letter-spacing:.04em}
+.vision-content h2{font-size:clamp(58px,8vw,128px);line-height:.87;color:#3b2118}
+.vision-content h2 span{color:var(--orange)}
+.vision-content p{max-width:900px;margin:45px 0 0;font-size:clamp(18px,1.8vw,26px);line-height:1.55;font-weight:600;color:#3b2118}
+@media(max-width:720px){
+  .vision-section{padding:76px 18px;grid-template-columns:1fr;gap:34px}
+  .vision-label{min-height:0;flex-direction:row;align-items:center}
+  .vision-label b{font-size:21px}
+  .vision-content p{margin-top:30px;font-size:17px}
+}
