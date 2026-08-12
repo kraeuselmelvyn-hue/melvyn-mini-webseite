@@ -31,3 +31,11 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
   .delivery-pair .brand-button{width:100%}
   .order-section .brand-button-large{width:100%;min-width:0}
 }
+
+
+/* Stack delivery choices in the hero while keeping both equally sized. */
+.hero-actions .delivery-pair{flex-direction:column;align-items:stretch}
+.hero-actions .delivery-pair .brand-button{width:320px}
+@media(max-width:720px){
+  .hero-actions .delivery-pair .brand-button{width:100%}
+}
