@@ -1,7 +1,5 @@
-# Melvyn Mini-Webseite
+# Chickentopia Onepager
 
-Eine responsive persönliche Landingpage für Melvyn Kraeusel mit den Schwerpunkten E-Commerce, SEO und Digital Entrepreneurship.
+Responsive Onepage-Website für Chickentopia Berlin mit Menü, Flavours, Standort, Öffnungszeiten sowie direkten Links zu Wolt, Uber Eats und Instagram.
 
-## Veröffentlichung mit Netlify
-
-Das Repository kann direkt in Netlify importiert werden. Es sind keine Build-Einstellungen nötig; Netlify veröffentlicht die `index.html` automatisch.
+Die Seite besteht aus `index.html` und `style.css` und kann ohne Build-Schritt direkt über Netlify veröffentlicht werden.
