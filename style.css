@@ -20,3 +20,14 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
 .brand-wolt,
 .brand-uber{background:#fff;color:#111!important}
 .brand-wolt img{mix-blend-mode:normal}
+
+
+/* Keep Wolt and Uber Eats actions visually equal. */
+.delivery-pair{display:inline-flex;align-items:stretch;gap:9px}
+.delivery-pair .brand-button{flex:1 1 0;min-width:0}
+.order-section .brand-button-large{width:320px;min-width:320px}
+@media(max-width:720px){
+  .delivery-pair{width:100%}
+  .delivery-pair .brand-button{width:100%}
+  .order-section .brand-button-large{width:100%;min-width:0}
+}
