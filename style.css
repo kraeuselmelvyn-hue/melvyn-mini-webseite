@@ -82,3 +82,15 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
   .social-video{min-width:84vw}
   .social-video iframe,.social-video-featured iframe{height:560px}
 }
+
+
+/* Uniform, minimal reel presentation. */
+.social-video,.social-video-featured{border:2px solid rgba(244,123,32,.55);border-radius:16px;background:#0f0b09}
+.social-video iframe,.social-video-featured iframe{height:640px}
+.social-video>a{display:none}
+@media(max-width:1050px){
+  .social-video iframe,.social-video-featured iframe{height:590px}
+}
+@media(max-width:720px){
+  .social-video iframe,.social-video-featured iframe{height:560px}
+}
