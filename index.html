@@ -18,12 +18,12 @@
 <body>
   <div class="announcement">HALAL FRIED CHICKEN · BERLIN OSTBAHNHOF · DI–SO GEÖFFNET</div>
   <header class="site-header">
-    <a class="home-logo" href="#home" aria-label="Zurück zum Anfang"><img src="assets/mascot-sticker-sheet.png" alt="Chickentopia Maskottchen" style="width:200%;max-width:none;left:0;top:0;transform:none"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><em>Menü</em></button>
     <nav id="main-nav" aria-label="Hauptnavigation">
       <a href="#menu">Menü</a><a href="#flavours">Flavours</a><a href="#location">Location</a>
       <a class="nav-order" href="https://wolt.com/de/deu/berlin/restaurant/chickentopia" target="_blank" rel="noreferrer">Jetzt bestellen ↗</a>
     </nav>
+    <a class="home-logo" href="#home" aria-label="Zurück zum Anfang"><img src="assets/mascot-sticker-sheet.png" alt="Chickentopia Maskottchen"></a>
   </header>
 
   <main>
@@ -38,11 +38,6 @@
     </section>
 
     <section class="ticker" aria-label="Chickentopia Highlights"><div>WINGS ★ BONELESS ★ TENDERS ★ HOT HONEY ★ SEOUL SWEET CHILI ★ BASIL BOMB ★ LEMON PEPPER KICK ★&nbsp;</div></section>
-
-    <section class="dip-story" aria-label="Chicken Wing mit Ranch Dip">
-      <div class="dip-copy"><p>Our perfect match</p><h2>CRUNCH<br>MEETS<br><span>CREAMY.</span></h2><p>Unser Ranch Dip macht jeden Wing komplett. Scroll weiter und hol dir den perfekten Dip.</p></div>
-      <div class="dip-stage"><div class="dip-motion"><img class="dip-wing" src="assets/dipping-wing.png" alt="Knuspriger Chicken Wing"><img class="dip-cup" src="assets/ranch-cup.png" alt="Ranch Dip Becher"></div><span>Scroll to dip ↓</span></div>
-    </section>
 
     <section class="menu-section" id="menu">
       <div class="section-title"><p>Pick your favorite</p><h2>UNSER MENÜ</h2><span>Frisch frittiert. Voller Flavour.</span></div>
@@ -85,9 +80,6 @@
     const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
     toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open)});
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');nav.classList.remove('open')}));
-    const dipStory=document.querySelector('.dip-story');
-    const updateDip=()=>{if(!dipStory)return;const r=dipStory.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(innerHeight-r.top)/(innerHeight+r.height*.35)));dipStory.style.setProperty('--dip-progress',progress.toFixed(3))};
-    addEventListener('scroll',updateDip,{passive:true});addEventListener('resize',updateDip);updateDip();
   </script>
 </body>
 </html>
