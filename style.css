@@ -167,3 +167,8 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
 .review-author strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .review-author small{color:#806f63;font-size:9px;text-transform:uppercase;letter-spacing:.09em}
 .review-card>footer>b{font-size:17px;color:var(--orange)}
+
+
+/* Review cards are informational only, not links. */
+.review-card{cursor:default}
+.review-card:hover,.review-card:focus-visible{transform:none;box-shadow:7px 7px 0 var(--orange);outline:none}
