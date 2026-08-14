@@ -124,3 +124,34 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
   .social-video,.social-video-featured{min-width:82vw}
   .social-video iframe,.social-video-featured iframe{height:100%}
 }
+
+
+/* Customer reviews: clean, continuous slider that pauses on interaction. */
+.reviews-section{padding:105px 0 115px;background:#fff6e8;color:#17120e;overflow:hidden;border-bottom:1px solid var(--line)}
+.reviews-head{padding:0 5vw;margin-bottom:50px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.reviews-head p{margin:0 0 12px;color:#c93d22;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.reviews-head h2{font-size:clamp(58px,7.5vw,118px);line-height:.87;color:#3b2118}
+.reviews-head h2 span{color:var(--orange)}
+.reviews-head>a{margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid #3b2118;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.reviews-marquee{overflow:hidden;padding:10px 0 14px;outline:none}
+.reviews-track{display:flex;gap:22px;width:max-content;animation:reviews-scroll 34s linear infinite;will-change:transform}
+.reviews-marquee:hover .reviews-track,.reviews-marquee:focus .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:paused}
+.review-card{width:min(380px,82vw);min-height:300px;padding:28px;border:2px solid #17120e;border-radius:22px;background:#fff;box-shadow:7px 7px 0 var(--orange);display:flex;flex-direction:column}
+.review-top{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.google-mark{width:35px;height:35px;border:1px solid #ddd;border-radius:50%;display:grid;place-items:center;background:#fff;color:#4285f4;font:800 19px Arial,sans-serif}
+.review-stars{color:#f47b20;letter-spacing:.12em;font-size:16px}
+.review-card>p{margin:32px 0 36px;font-size:19px;line-height:1.55;font-weight:650}
+.review-card>footer{margin-top:auto;padding-top:18px;border-top:1px solid #eadbcd;background:none;color:#17120e;display:flex;align-items:end;justify-content:space-between;gap:16px}
+.review-card footer strong{font-size:12px}
+.review-card footer span{color:#806f63;font-size:9px;text-transform:uppercase;letter-spacing:.09em}
+@keyframes reviews-scroll{to{transform:translateX(calc(-50% - 11px))}}
+@media(max-width:720px){
+  .reviews-section{padding:75px 0 85px}
+  .reviews-head{padding:0 18px;display:block;margin-bottom:35px}
+  .reviews-head>a{display:inline-block;margin-top:24px}
+  .reviews-track{gap:16px;animation-duration:30s}
+  .review-card{min-height:280px;padding:24px}
+  .review-card>p{font-size:17px}
+  @keyframes reviews-scroll{to{transform:translateX(calc(-50% - 8px))}}
+}
+@media(prefers-reduced-motion:reduce){.reviews-track{animation:none}}
