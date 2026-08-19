@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap');
 
-:root{--ink:#3b2118;--orange:#f47b20;--cream:#fff6e8;--line:rgba(59,33,24,.18);--muted:#735c53}
+:root{--ink:#3b2118;--orange:#C15438;--cream:#fff6e8;--line:rgba(59,33,24,.18);--muted:#735c53}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
