@@ -201,7 +201,7 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
   right:0;
   height:96px;
   pointer-events:none;
-  opacity:.72;
+  opacity:.65;
   background:url("assets/decor/wrapper-checker-v3.webp") center/auto 96px repeat-x;
 }
 .hero-copy,.hero-food{position:relative;z-index:1}
