@@ -186,29 +186,46 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
 @media(prefers-reduced-motion:reduce){.flavour-bird{transition:none}.flavour-list article:hover .flavour-bird{transform:none}}
 
 
-/* Sharp food-truck-inspired border only in the orange first viewport. */
+/* Sandwich-wrapper pattern, distributed like the food-truck trim. */
 .hero{background:#C15438}
-.hero-copy{position:relative;isolation:isolate;overflow:hidden;padding-top:calc(6vh + 74px)}
+.hero-copy{position:relative;isolation:isolate;overflow:hidden;padding-top:calc(6vh + 104px)}
 .hero-copy>*{position:relative;z-index:1}
 .hero-copy::before{
   content:"";
   position:absolute;
   z-index:0;
-  top:10px;
-  left:18px;
-  right:18px;
-  height:76px;
+  top:0;
+  left:0;
+  right:0;
+  height:96px;
   pointer-events:none;
-  background:url("assets/decor/foodtruck-border-v2.webp") center/auto 76px repeat-x;
+  background:url("assets/decor/wrapper-checker-v3.webp") center/auto 96px repeat-x;
+}
+.hero-copy::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:150px;
+  left:52px;
+  width:270px;
+  height:52px;
+  pointer-events:none;
+  background:url("assets/decor/wrapper-checker-v3.webp") left center/auto 52px repeat-x;
+  transform:rotate(90deg);
+  transform-origin:top left;
 }
 .order-section{background:#C15438}
+@media(max-width:1050px){
+  .hero-copy::after{top:142px;left:42px;width:210px;height:42px;background-size:auto 42px}
+}
 @media(max-width:720px){
-  .hero-copy{padding-top:105px}
+  .hero-copy{padding-top:108px}
   .hero-copy::before{
-    top:8px;
+    top:0;
     left:0;
     right:0;
-    height:66px;
-    background-size:auto 66px;
+    height:82px;
+    background-size:auto 82px;
   }
+  .hero-copy::after{display:none}
 }
