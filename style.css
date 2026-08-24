@@ -184,3 +184,35 @@ body{background:#fff6e8}.site-header{background:rgba(255,246,232,.96);display:gr
   .flavour-list article>b{grid-column:2;justify-self:start}
 }
 @media(prefers-reduced-motion:reduce){.flavour-bird{transition:none}.flavour-list article:hover .flavour-bird{transform:none}}
+
+
+/* Temporary closure notice: 25–30 August. */
+body.popup-open{overflow:hidden}
+.closure-popup{position:fixed;inset:0;z-index:1000;padding:22px;display:grid;place-items:center;background:rgba(23,18,14,.72);backdrop-filter:blur(7px);animation:closure-fade-in .25s ease both}
+.closure-popup[hidden]{display:none}
+.closure-popup.is-closing{animation:closure-fade-out .22s ease both}
+.closure-popup-card{position:relative;width:min(610px,100%);padding:34px;background-color:#f47b20;background-image:linear-gradient(45deg,rgba(255,246,232,.96) 25%,transparent 25%,transparent 75%,rgba(255,246,232,.96) 75%),linear-gradient(45deg,rgba(255,246,232,.96) 25%,transparent 25%,transparent 75%,rgba(255,246,232,.96) 75%);background-position:0 0,38px 38px;background-size:76px 76px;border:3px solid #3b2118;border-radius:30px;box-shadow:12px 12px 0 #3b2118;animation:closure-card-in .38s cubic-bezier(.2,.9,.25,1.15) both}
+.closure-popup-inner{padding:52px 42px 38px;text-align:center;background:#fff6e8;border:3px solid #f04b25;border-radius:26px;box-shadow:inset 0 0 35px rgba(244,123,32,.08)}
+.closure-popup-close{position:absolute;top:14px;right:14px;z-index:2;width:43px;height:43px;border:2px solid #17120e;border-radius:50%;display:grid;place-items:center;background:#fff6e8;color:#17120e;font:700 28px/1 "DM Sans",Arial,sans-serif;cursor:pointer;box-shadow:3px 3px 0 #17120e;transition:transform .18s,box-shadow .18s}
+.closure-popup-close:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 #17120e}
+.closure-popup-close:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.closure-eyebrow{margin:0 0 15px;color:#c93d22;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.closure-popup h2{color:#ef4826;font-family:"Anton",Impact,sans-serif;font-size:clamp(33px,5.8vw,55px);line-height:1.02;letter-spacing:.01em}
+.closure-popup h2 strong{display:inline-block;margin:8px 0 3px;font:inherit;font-size:1.22em}
+.closure-divider{display:block;width:58%;margin:27px auto 24px;border-top:3px dotted #ef4826}
+.closure-return{margin:0;color:#3b2118;font-size:clamp(17px,2.6vw,24px);line-height:1.45;font-weight:700;letter-spacing:.02em}
+.closure-return b{font-size:1.35em}
+.closure-signoff{margin:26px 0 0;color:#ef4826;font-size:clamp(23px,4vw,36px);font-weight:700;font-style:italic;transform:rotate(-2deg)}
+.closure-signoff span{font-style:normal;font-size:1.2em}
+@keyframes closure-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes closure-fade-out{to{opacity:0}}
+@keyframes closure-card-in{from{opacity:0;transform:translateY(24px) scale(.94)}to{opacity:1;transform:none}}
+@media(max-width:560px){
+  .closure-popup{padding:14px}
+  .closure-popup-card{padding:18px;border-radius:23px;box-shadow:7px 7px 0 #3b2118;background-size:54px 54px;background-position:0 0,27px 27px}
+  .closure-popup-inner{padding:48px 18px 28px;border-radius:19px}
+  .closure-popup-close{top:8px;right:8px;width:39px;height:39px}
+  .closure-divider{margin:21px auto 19px}
+  .closure-signoff{margin-top:20px}
+}
+@media(prefers-reduced-motion:reduce){.closure-popup,.closure-popup-card,.closure-popup.is-closing{animation:none}}
